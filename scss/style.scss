@@ -1,6 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html,
 body {
     width: 100%;
     height: 100%;
+}
+
+html {
     font-size: 100px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: .5rem;
+    background: #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p {
+        font-size: .14rem;
+    }
+}
+
+.tab {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    p {
+        font-size: .14rem;
+        display: none;
+    }
+    .active {
+        display: block;
+    }
 }

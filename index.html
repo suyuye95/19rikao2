@@ -10,7 +10,34 @@
 </head>
 
 <body>
-
+    <div class="wrapper">
+        <header class="header">
+            <p>电源</p>
+            <p>首页</p>
+            <p>菜单</p>
+            <p>截屏</p>
+        </header>
+        <div class="tab">
+            <p class="active">关闭电源</p>
+            <p>来到首页</p>
+            <p>来到菜单</p>
+            <p>截屏一下</p>
+        </div>
+    </div>
+    <script>
+        var head = document.querySelector('.header');
+        var oph = Array.from(head.querySelectorAll('p'));
+        var tab = document.querySelector('.tab');
+        var tabp = Array.from(tab.querySelectorAll('p'));
+        oph.forEach(function(e, n) {
+            e.onclick = function() {
+                for (var i = 0; i < tabp.length; i++) {
+                    tabp[i].classList.remove('active');
+                }
+                tabp[n].classList.add('active');
+            }
+        })
+    </script>
 </body>
 
 </html>
